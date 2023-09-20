@@ -87,54 +87,86 @@ namespace CSH_Lab1
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             g = CreateGraphics();
+            bool is_empty = false;
             if (labelWidth.Visible && labelHeight.Visible)
             {
-                var shape = new Rectangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text));
-                labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
-                labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
-                g.Clear(Color.Azure);
-                g.DrawRectangle(Pens.Black, 200, 150, ((float)shape.GetWidth())*50, ((float)shape.GetHeight())*50);
-            }
-            if (labelSide.Visible)
-            {
-                var shape = new Square(double.Parse(textBox1.Text));
-                labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
-                labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
-                g.Clear(Color.Azure);
-                g.DrawRectangle(Pens.Black, 200, 150, ((float)shape.GetSide()) * 50, ((float)shape.GetSide()) * 50);
-            }
-            if (labelRadius.Visible)
-            {
-                var shape = new Circle(double.Parse(textBox1.Text));
-                labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
-                labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
-                g.Clear(Color.Azure);
-                g.DrawEllipse(Pens.Black, 200, 150, ((float)shape.GetRadius()) * 50, ((float)shape.GetRadius()) * 50);
-            }
-            if (labelSideAB.Visible && labelSideBC.Visible &&  labelSideCA.Visible)
-            {
-                var shape = new Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text));
-                if (shape.GetSideAB() < shape.GetSideBC() + shape.GetSideCA()
-                    && shape.GetSideBC() < shape.GetSideAB() + shape.GetSideCA()
-                    && shape.GetSideCA() < shape.GetSideAB() + shape.GetSideBC())
+                if (textBox1.Text == "" || textBox2.Text == "")
                 {
-                    labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
-                    labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
-                    double angleB = Math.Acos((shape.GetSideAB() * shape.GetSideAB() + shape.GetSideBC() * shape.GetSideBC() - shape.GetSideCA() * shape.GetSideCA()) 
-                        / (2 * shape.GetSideAB() * shape.GetSideAB()));
-                    var point1 = new Point(200, 150);
-                    var point2 = new Point(200 + (int)shape.GetSideAB() * 20, 150);
-                    var point3 = new Point((int)(200 + shape.GetSideAB() * 20 * Math.Cos(angleB)), (int)(150 + shape.GetSideAB() * 20 * Math.Sin(angleB)));
-                    g.Clear(Color.Azure);
-                    g.DrawLines(Pens.Black, new[] { point1, point2, point3, point1 });
+                    is_empty = true;
                 }
                 else
                 {
-                    MessageBox.Show("Такого треугольника не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var shape = new Rectangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text));
+                    labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
+                    labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
+                    g.Clear(Color.Azure);
+                    g.DrawRectangle(Pens.Black, 200, 150, ((float)shape.GetWidth()) * 50, ((float)shape.GetHeight()) * 50);
                 }
-                
             }
-            
+            if (labelSide.Visible)
+            {
+                if (textBox1.Text == "")
+                {
+                    is_empty = true;
+                }
+                else
+                {
+                    var shape = new Square(double.Parse(textBox1.Text));
+                    labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
+                    labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
+                    g.Clear(Color.Azure);
+                    g.DrawRectangle(Pens.Black, 200, 150, ((float)shape.GetSide()) * 50, ((float)shape.GetSide()) * 50);
+                }
+            }
+            if (labelRadius.Visible)
+            {
+                if (textBox1.Text == "")
+                {
+                    is_empty = true;
+                }
+                else
+                {
+                    var shape = new Circle(double.Parse(textBox1.Text));
+                    labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
+                    labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
+                    g.Clear(Color.Azure);
+                    g.DrawEllipse(Pens.Black, 200, 150, ((float)shape.GetRadius()) * 50, ((float)shape.GetRadius()) * 50);
+                }
+            }
+            if (labelSideAB.Visible && labelSideBC.Visible && labelSideCA.Visible)
+            {
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+                {
+                    is_empty = true;
+                }
+                else
+                {
+                    var shape = new Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text));
+                    if (shape.GetSideAB() < shape.GetSideBC() + shape.GetSideCA()
+                        && shape.GetSideBC() < shape.GetSideAB() + shape.GetSideCA()
+                        && shape.GetSideCA() < shape.GetSideAB() + shape.GetSideBC())
+                    {
+                        labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
+                        labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
+                        double angleB = Math.Acos((shape.GetSideAB() * shape.GetSideAB() + shape.GetSideBC() * shape.GetSideBC() - shape.GetSideCA() * shape.GetSideCA())
+                            / (2 * shape.GetSideAB() * shape.GetSideAB()));
+                        var point1 = new Point(200, 150);
+                        var point2 = new Point(200 + (int)shape.GetSideAB() * 20, 150);
+                        var point3 = new Point((int)(200 + shape.GetSideAB() * 20 * Math.Cos(angleB)), (int)(150 + shape.GetSideAB() * 20 * Math.Sin(angleB)));
+                        g.Clear(Color.Azure);
+                        g.DrawLines(Pens.Black, new[] { point1, point2, point3, point1 });
+                    }
+                    else
+                    {
+                        MessageBox.Show("Такого треугольника не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            if (is_empty)
+            {
+                MessageBox.Show("Вы не ввели данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
