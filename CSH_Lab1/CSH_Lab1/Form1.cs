@@ -96,7 +96,7 @@ namespace CSH_Lab1
                 }
                 else
                 {
-                    var shape = new Rectangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text));
+                    var shape = new global::Rectangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text));
                     labelPerimeter.Text = "Периметр: " + Convert.ToString(shape.calculatePerimeter());
                     labelArea.Text = "Площадь: " + Convert.ToString(shape.calculateArea());
                     g.Clear(Color.Azure);
