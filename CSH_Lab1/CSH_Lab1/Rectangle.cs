@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 class Rectangle : Figure
 {
-    private double Width;
-    private double Height;
+    public double Width { get; private set; }
+    public double Height { get; private set; }
 
     public Rectangle(double width, double height)
     {
@@ -15,22 +15,8 @@ class Rectangle : Figure
         Height = height;
     }
 
-    public double GetWidth()
-    {
-        return Width;
-    }
-    public double GetHeight()
-    {
-        return Height;
-    }
-    public void SetWidth(double width)
-    {
-        Width = width;
-    }
-    public void SetHeight(double height)
-    {
-        Height = height;
-    }
     public override double calculatePerimeter() => Width * 2 + Height * 2;
     public override double calculateArea() => Width * Height;
+    public override string outputInfo() => "Прямоугольник со сторонами " + Width.ToString() 
+        + " и " + Height.ToString();
 }

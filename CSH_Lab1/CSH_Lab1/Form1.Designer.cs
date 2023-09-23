@@ -45,6 +45,10 @@
             this.labelSideBC = new System.Windows.Forms.Label();
             this.labelPerimeter = new System.Windows.Forms.Label();
             this.labelArea = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ListButton1 = new System.Windows.Forms.Button();
+            this.ListButton2 = new System.Windows.Forms.Button();
+            this.ListButton3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonRectangle
@@ -212,12 +216,54 @@
             this.labelArea.TabIndex = 17;
             this.labelArea.Text = "Площадь: ";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(538, 25);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(227, 254);
+            this.richTextBox1.TabIndex = 18;
+            this.richTextBox1.Text = "";
+            // 
+            // ListButton1
+            // 
+            this.ListButton1.Location = new System.Drawing.Point(447, 25);
+            this.ListButton1.Name = "ListButton1";
+            this.ListButton1.Size = new System.Drawing.Size(75, 23);
+            this.ListButton1.TabIndex = 19;
+            this.ListButton1.Text = "Список 1";
+            this.ListButton1.UseVisualStyleBackColor = true;
+            this.ListButton1.Click += new System.EventHandler(this.ListButton1_Click);
+            // 
+            // ListButton2
+            // 
+            this.ListButton2.Location = new System.Drawing.Point(447, 54);
+            this.ListButton2.Name = "ListButton2";
+            this.ListButton2.Size = new System.Drawing.Size(75, 23);
+            this.ListButton2.TabIndex = 20;
+            this.ListButton2.Text = "Список 2";
+            this.ListButton2.UseVisualStyleBackColor = true;
+            this.ListButton2.Click += new System.EventHandler(this.ListButton2_Click);
+            // 
+            // ListButton3
+            // 
+            this.ListButton3.Location = new System.Drawing.Point(447, 83);
+            this.ListButton3.Name = "ListButton3";
+            this.ListButton3.Size = new System.Drawing.Size(75, 23);
+            this.ListButton3.TabIndex = 21;
+            this.ListButton3.Text = "Список 3";
+            this.ListButton3.UseVisualStyleBackColor = true;
+            this.ListButton3.Click += new System.EventHandler(this.ListButton3_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ListButton3);
+            this.Controls.Add(this.ListButton2);
+            this.Controls.Add(this.ListButton1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.labelArea);
             this.Controls.Add(this.labelPerimeter);
             this.Controls.Add(this.labelSideBC);
@@ -261,6 +307,10 @@
         private System.Windows.Forms.Label labelSideBC;
         private System.Windows.Forms.Label labelPerimeter;
         private System.Windows.Forms.Label labelArea;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button ListButton1;
+        private System.Windows.Forms.Button ListButton2;
+        private System.Windows.Forms.Button ListButton3;
     }
 }
 
