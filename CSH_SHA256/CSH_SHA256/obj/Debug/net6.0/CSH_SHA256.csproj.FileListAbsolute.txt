@@ -1,0 +1,14 @@
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\bin\Debug\net6.0\CSH_SHA256.exe
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\bin\Debug\net6.0\CSH_SHA256.deps.json
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\bin\Debug\net6.0\CSH_SHA256.runtimeconfig.json
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\bin\Debug\net6.0\CSH_SHA256.dll
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\bin\Debug\net6.0\CSH_SHA256.pdb
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.AssemblyInfoInputs.cache
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.AssemblyInfo.cs
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.csproj.CoreCompileInputs.cache
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.dll
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\refint\CSH_SHA256.dll
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.pdb
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\CSH_SHA256.genruntimeconfig.cache
+C:\Users\Всеволод\Desktop\C#Labs\CSH_SHA256\CSH_SHA256\obj\Debug\net6.0\ref\CSH_SHA256.dll
